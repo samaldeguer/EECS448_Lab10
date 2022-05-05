@@ -7,6 +7,7 @@
   }
   else
   {
+    echo "<head><title>Exercise 5: View Users</title></head>";
     echo "<table><tr><th>Users</th></tr>";
     echo "<style>table, th, td { border: 1px solid black; border-collapse: collapse; }</style>";
     $query = "SELECT * FROM Users";
