@@ -1,1 +1,35 @@
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise 7: Delete Posts</title>
+  </head>
+  <body>
+    <form id="dropdown" action="ViewUserPosts.php" method="POST">
+      <label for="users">Select a user:</label>
+      <select name="users" id="users">
+        <?php
+          $mysqli = new mysqli("mysql.eecs.ku.edu", "s661a552", "ohz3heet", "s661a552");
+          if ($mysqli->connect_errno)
+          {
+              printf("Connect failed: %s\n", $mysqli->connect_error);
+              exit();
+          }
+          else
+          {
+            $query = "SELECT * FROM Users";
+            $result = mysqli_query($mysqli, $query);
+            if (mysqli_num_rows($result) > 0)
+            {
+              while ($row = mysqli_fetch_assoc($result))
+              {
+                echo "<option value='".$row['user_id']."'>".$row["user_id"]."</option>";
+              }
+            }
+          }
+          $mysqli->close();
+        ?>
+      </select><br>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
