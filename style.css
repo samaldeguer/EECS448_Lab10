@@ -1,1 +1,60 @@
+body {
+	background-color: #edf7ff;
+}
 
+h1 {
+	font-size:  50px;
+}
+
+p {
+	font-size:  20px;
+}
+
+.textStyle {
+	color:  #003a69;
+	font-family: "Lucida Console", "Courier New", monospace;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #8ACEFF;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #022F4F;
+}
+
+.active {
+  background-color: #022F4F;
+}
+
+.block {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #04AA6D;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.clickToView {
+	font-size:  40px;
+	background-color:  white;
+}
